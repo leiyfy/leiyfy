@@ -1,0 +1,28 @@
+import random
+# 定义游戏名称
+game_name = "My Game"
+
+# 欢迎消息
+welcome_message = f"Welcome to {game_name}!"
+
+# 生成随机数范围
+range_start = 1
+range_end = 10
+
+# 生成随机数
+random_number = random.randint(range_start, range_end)
+
+# 玩家输入提示
+player_input_message = "Please enter a number between 1 and 10:"
+
+# 玩家输入
+player_input = int(input(player_input_message))
+
+# 判断玩家是否猜对
+if player_input == random_number:
+    win_message = "You guessed it correctly! Congratulations!"
+else:
+    lose_message = "Sorry, you didn't guess the right number."
+
+# 输出结果
+print(win_message if player_input == random_number else lose_message)
